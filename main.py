@@ -41,7 +41,6 @@ for stock in mystocks:
     # Create variable to determine HIGH and LOW in time period
     hl = copy.copy(mystockdata[stock])
     hl.sort()
-    print(hl)
 
     # Plot points onto graph and show
     plt.plot(mystock)
@@ -50,6 +49,8 @@ for stock in mystocks:
     plt.xlabel('Trading Days Ago')
     plt.ylabel('Closing Price')
     plt.savefig(f'charts/{stock}.png')
-    plt.show()
+    print(f'Saving {stock}.png to charts folder.')
+
+print('All done.')
 
 
