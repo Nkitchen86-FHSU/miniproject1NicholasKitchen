@@ -1,6 +1,7 @@
 # INF601 - Advanced Programming in Python
 # Nicholas Kitchen
 # Mini Project 1
+import os
 
 # This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
 # (5/5 points) Initial comments with your name, class and project at the top of your .py file.
@@ -18,6 +19,12 @@ import pprint
 import numpy as np
 import matplotlib.pyplot as plt
 import copy
+from pathlib import Path
+
+# Create charts folder if it does not exist
+charts = Path('charts')
+if not charts.exists():
+    Path(r'charts').mkdir()
 
 mystocks = ['CRSR', 'SBUX', 'AAPL', 'INTC', 'AMD']
 mystockdata = {}
